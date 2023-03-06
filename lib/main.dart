@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
         title: 'Namer App',
         theme: ThemeData(
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(128, 0, 255, 1)),
+          colorScheme:
+              ColorScheme.fromSeed(seedColor: Color.fromRGBO(128, 0, 255, 1)),
         ),
         home: MyHomePage(),
       ),
@@ -90,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var mainArea = ColoredBox(
       color: colorScheme.surfaceVariant,
       child: AnimatedSwitcher(
-        duration: Duration(milliseconds: 200),
+        duration: Duration(milliseconds: 512),
         child: page,
       ),
     );
@@ -161,6 +162,8 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class GeneratorPage extends StatelessWidget {
+  const GeneratorPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
